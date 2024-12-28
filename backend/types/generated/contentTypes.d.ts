@@ -429,17 +429,13 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
       'api::blog-post.blog-post'
     > &
       Schema.Attribute.Private;
-    postUrl: Schema.Attribute.UID<'title'>;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     User: Schema.Attribute.Relation<'oneToOne', 'api::author.author'>;
-    users_permissions_user: Schema.Attribute.Relation<
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
   };
 }
 
@@ -936,10 +932,6 @@ export interface PluginUsersPermissionsUser
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    blog_post: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::blog-post.blog-post'
-    >;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
     confirmed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;

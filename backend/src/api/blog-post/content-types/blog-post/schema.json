@@ -19,15 +19,9 @@
     "content": {
       "type": "richtext"
     },
-    "postUrl": {
+    "slug": {
       "type": "uid",
       "targetField": "title"
-    },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "blog_post"
     },
     "addMedia": {
       "type": "media",
