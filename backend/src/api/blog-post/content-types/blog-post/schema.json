@@ -50,6 +50,27 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "blog_post"
+    },
+    "metaTitle": {
+      "type": "string",
+      "default": "Meta Title",
+      "required": false,
+      "minLength": 10,
+      "maxLength": 60
+    },
+    "metaDescription": {
+      "type": "text",
+      "minLength": 50,
+      "maxLength": 160
+    },
+    "metaKeywords": {
+      "type": "text"
+    },
+    "focusKeyphrase": {
+      "type": "text"
+    },
+    "PublishedDate": {
+      "type": "date"
     }
   }
 }

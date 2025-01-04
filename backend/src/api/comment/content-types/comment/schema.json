@@ -23,12 +23,6 @@
       "type": "blocks",
       "required": true
     },
-    "blog_post": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::blog-post.blog-post",
-      "inversedBy": "comments"
-    },
     "parentId": {
       "type": "integer"
     },
@@ -41,6 +35,12 @@
     "createdat": {
       "type": "datetime",
       "required": true
+    },
+    "blog_post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::blog-post.blog-post",
+      "inversedBy": "comments"
     }
   }
 }
