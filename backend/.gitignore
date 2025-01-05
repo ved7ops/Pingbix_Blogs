@@ -135,3 +135,6 @@ node_modules/
 .tmp/
 .cache/
 build/
+*.tar.gz
+*.enc
+backup.*
