@@ -135,9 +135,3 @@ node_modules/
 .tmp/
 .cache/
 build/
-# Backup files
-backup.tar.gz.tar.gz.enc
-import_*.log
-*.tar.gz
-*.enc
-backup.*
