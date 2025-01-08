@@ -11,7 +11,7 @@ export default ({ env }) => {
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'pingbix_blog'),
         user: env('DATABASE_USERNAME', 'postgres'),
-        password: env('DATABASE_PASSWORD', '@Blog'),
+        password: env('DATABASE_PASSWORD', 'blog7new'),
         ssl: env.bool('DATABASE_SSL', false),
         schema: env('DATABASE_SCHEMA', 'public'),
       },
